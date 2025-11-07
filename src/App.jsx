@@ -1,6 +1,6 @@
 import './App.css'
 import Buttons from './components/Buttons';
-import CardContainer from './components/CardContainer';
+import Card from './components/Card';
 import { useState } from 'react';
 
 function App() {
@@ -39,13 +39,11 @@ function App() {
 
   const [active, setActive] = useState(0)
 
-  console.log(active, setActive);
-
   return (
     <>
       <h1 className='p-5'>Learn Web Development</h1>
-      <Buttons languages={languages} />
-      <CardContainer languages={languages} />
+      <Buttons languages={languages} active={active} setActive={setActive} />
+      <Card languages={languages} active={active} />
     </>
   )
 }
