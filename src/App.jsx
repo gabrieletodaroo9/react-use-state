@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import './App.css'
-import Buttons from './components/Buttons';
-import Card from './components/Card';
 import Header from './components/Header';
+import Main from './components/Main';
 
 function App() {
   const languages = [
@@ -42,9 +41,8 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Buttons languages={languages} active={active} setActive={setActive} />
-      <Card languages={languages} active={active} />
+      <Header active={active} />
+      <Main languages={languages} active={active} setActive={setActive} />
     </>
   )
 }
