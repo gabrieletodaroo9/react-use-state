@@ -37,7 +37,7 @@ function App() {
     }
   ];
 
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState(null)
 
   return (
     <>
