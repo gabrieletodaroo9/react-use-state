@@ -4,10 +4,10 @@ export default function Card({ languages, active }) {
 
     return (
         <div className="container pt-5">
-            <div className="card p-4">
+            <div className={`card rounded-pill text-center p-4 border-5 ${activeLang ? "border-warning" : "border-primary"}`}>
                 {activeLang && (
                     <>
-                        <h3>{activeLang.title}</h3>
+                        <h3 className="fw-bold pb-3">{activeLang.title}</h3>
                         <p>{activeLang.description}</p>
                     </>
                 )
